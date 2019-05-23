@@ -15,15 +15,15 @@ fun main(args: Array<String>) {
 //
 //    sam.displyWithLambda(::printName)
 
-    val q = Question()
+    val q:Question? = Question()
 
-    q.Answer = "42"
+    q?.Answer = "42"
 
-    q.display()
+    q?.display()
 
-    println("The answer to the question '${q.Question}' is ${q.Answer}")
+    println("The answer to the question '${q?.Question}' is ${q?.Answer}")
 
-    val message = if (q.Answer == q.CorrectAnswer) {
+    val message = if (q?.Answer == q?.CorrectAnswer) {
         "You were correct"
     } else {
         "Try again"
