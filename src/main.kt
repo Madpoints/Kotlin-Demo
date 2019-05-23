@@ -16,6 +16,12 @@ fun main(args: Array<String>) {
 //    sam.displyWithLambda(::printName)
 
     val q = Question()
+
+    q.Answer = "42"
+
+    q.display()
+
+    println("The answer to the question '${q.Question}' is ${q.Answer}")
 }
 
 //fun printName(name: String) {
@@ -27,4 +33,8 @@ class Question {
     var Answer:String = ""
     // immutable
     val Question:String = "What is the meaning of life?"
+
+    fun display() {
+        println("You said $Answer")
+    }
 }
