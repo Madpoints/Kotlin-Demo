@@ -1,4 +1,5 @@
 import com.rsk.Person
+import java.util.*
 
 fun main(args: Array<String>) {
     println("Hello, World!")
@@ -41,6 +42,40 @@ fun main(args: Array<String>) {
     }
 
     println("Number is $number")
+
+    for (i in 10 downTo 1 step 2) {
+        print("$i, ")
+    }
+
+    println()
+
+    for (i in 1 until 10) {
+        print("$i, ")
+    }
+
+    println()
+
+    var numbers = listOf(1,2,3,4,5)
+
+    for (i in numbers) {
+        print("$i, ")
+    }
+
+    println()
+
+    var ages = TreeMap<String, Int>()
+    ages["Kevin"] = 55
+    ages["Sam"] = 24
+    ages["Alex"] = 24
+    ages["Harry"] = 26
+
+    for ((name, age) in ages) {
+        println("$name is $age")
+    }
+
+    for ((index, element) in numbers.withIndex()) {
+        println("$element at $index")
+    }
 }
 
 //fun printName(name: String) {
