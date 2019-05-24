@@ -15,6 +15,7 @@ fun main(args: Array<String>) {
 //
 //    sam.displyWithLambda(::printName)
 
+    // ? means value can be either null or not null
     val q:Question? = Question()
 
     q?.Answer = "42"
@@ -30,6 +31,8 @@ fun main(args: Array<String>) {
     }
 
     println(message)
+
+    q?.printResult()
 }
 
 //fun printName(name: String) {
@@ -45,5 +48,12 @@ class Question {
 
     fun display() {
         println("You said $Answer")
+    }
+
+    fun printResult() {
+        when (Answer) {
+            CorrectAnswer -> print("You were correct")
+            else -> print("Try again")
+        }
     }
 }
